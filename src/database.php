@@ -16,5 +16,9 @@ $conn .= ";sslmode=verify-ca;sslrootcert=ca.pem";
 try {
   $db = new PDO($conn, $fields["user"], $fields["pass"]);
 } catch (Exception $e) {
-  echo "Error: " . $e->getMessage();
+  echo "Error: " . get_class($e) . "<br>Message: " . $e->getMessage() . "<br>Stack: " . str_replace('#', "\n", $e->getTraceAsString());
+  // foreach ($e as $k=>$v) {
+  //   echo $k . ": " . $v . "<br>";
+  // }
+  exit;
 }
