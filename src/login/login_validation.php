@@ -1,8 +1,8 @@
 <?php
 
-include_once "../database.php";
-
 session_start();
+
+include_once "../database.php";
 
 if (!$_REQUEST) {
   // if ($_SESSION['isLogin'] === true) {
