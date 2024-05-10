@@ -1,6 +1,6 @@
 <?php
 
-include_once "../aiven_config.php";
+include_once "aiven_config.php";
 
 $uri = "mysql://{$aiven_username}:{$aiven_password}@mysql-issue-tracker-dc87b75-issue-tracking-app.h.aivencloud.com:13387/defaultdb?ssl-mode=REQUIRED";
 
