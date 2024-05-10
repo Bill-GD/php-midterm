@@ -1,0 +1,21 @@
+1. ctrl+shift+p
+2. add dev -> Add Dev Container Configuration Files
+3. Create new
+4. PHP & MariaDB
+5. 8.2-bullseye
+6. PHP (devcontainers), NOT php (shyim)
+7. Keep Defaults
+8. Modify devcontainer.json
+	- add: 
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "ikappas.composer"
+		]
+	  }
+	},
+	- add: "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html; if [ -f composer.json ];then composer install;fi"
+	- delete:
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+9. Rebuild
