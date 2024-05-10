@@ -1,5 +1,3 @@
 <?php
-
-phpinfo();
-
-// header("Location: src/login/login.html");
+// phpinfo();
+header("Location: src/login/login.html");
