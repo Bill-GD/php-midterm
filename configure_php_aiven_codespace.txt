@@ -14,7 +14,8 @@
 		]
 	  }
 	},
-	- add: "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html; if [ -f composer.json ];then composer install;fi"
+	- add:
+	"postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html; if [ -f composer.json ];then composer install;fi"
 	- delete:
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
